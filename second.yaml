@@ -1,0 +1,7 @@
+- name: my second playbook
+  hosts: all
+  tasks: 
+     - name: create new file
+       file: /home/ec2-user/file.txt
+       state: touch
+       mode: u=rw,g=r,o=r  
