@@ -1,0 +1,8 @@
+- name: Return motd to registered var
+  hosts: all
+  tasks:
+  - name: demo-2 text file
+    command: touch /home/ec2-user/text.txt
+
+  - name: create demo dir
+    command: mkdir /home/ec2-user/demo-dir 
