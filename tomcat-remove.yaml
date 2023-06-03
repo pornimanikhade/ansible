@@ -7,12 +7,13 @@
     - name: Stop Tomcat
       command: sh /opt/tomcat8/apache-tomcat-8.5.89/bin/shutdown.sh
       become: true
-      #become_user: tomcat
+      become_user: tomcat
 
     - name: Remove Tomcat
       file:
         path: /etc/systemd/system/tomcat.service
         state: absent
+        become: true
 
     - name: remove user "tomcat"
       user:
