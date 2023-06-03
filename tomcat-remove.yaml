@@ -11,7 +11,7 @@
 
     - name: Remove Tomcat
       file:
-        path: /opt/apache-tomcat-8.5.89
+        path: /etc/systemd/system/tomcat.service
         state: absent
 
     - name: remove user "tomcat"
